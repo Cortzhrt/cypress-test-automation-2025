@@ -24,10 +24,10 @@ module.exports = defineConfig({
     projectName: process.env.PROJECT_NAME || "Cypress Test Automation",
     environment: process.env.ENVIRONMENT || "QA",
     API_KEY: process.env.API_KEY,
-    API_BASE_URL: process.env.API_BASE_URL || 'https://petstore.swagger.io/v2',
+    API_BASE_URL: process.env.API_BASE_URL || 'https://localhost:3000/api',
   },
   e2e: {
-    baseUrl: process.env.API_BASE_URL || 'https://petstore.swagger.io/v2',
+    baseUrl: process.env.API_BASE_URL || 'https://localhost:3000/api',
     setupNodeEvents(on, config) {
       // Register cypress-mochawesome-reporter hooks
       require("cypress-mochawesome-reporter/plugin")(on);

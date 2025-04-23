@@ -39,3 +39,11 @@ export function generatePetData() {
     status: faker.helpers.arrayElement(['available', 'pending', 'sold']),
   };
 }
+
+export function generateUserRegistrationData() {
+  return {
+    name: faker.person.fullName(),
+    email: faker.internet.email(),
+    password: 'passw0rd',
+  };
+}
